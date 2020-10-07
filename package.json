@@ -2,7 +2,7 @@
 	"name": "hometask-weatherapi",
 	"version": "1.0.0",
 	"description": "* Create and setup an express server with 2 endpoints, one with /nearby and one with /search *",
-	"main": "index.js",
+	"main": "server.js",
 	"engines": {
 		"node": "12.x"
 	},
