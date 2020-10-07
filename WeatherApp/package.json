@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "* Create and setup an express server with 2 endpoints, one with /nearby and one with /search *",
 	"main": "index.js",
+	"engines": {
+		"node": "12.x"
+	},
 	"scripts": {
 		"test": "eslint **.js",
 		"start": "nodemon server.js"
