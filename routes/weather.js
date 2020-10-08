@@ -54,7 +54,6 @@ const getLocationByLat = async (lat, lon) => {
 router.route('/').get(async (req, res) => {
 	const lat = req.query.latitude;
 	const lon = req.query.longitude;
-	console.log(req.query);
 	await getLocationByLat(lat, lon);
 
 	await res.render('index', options);

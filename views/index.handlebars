@@ -1,10 +1,11 @@
 <main>
   <header>
+
             <form action="/weather" name="frm1">
             <input type="hidden" name="longitude" id="getlon" />
             <input type="hidden" name="latitude" id="getlat" />
         </form>
-        <form method="POST">
+        <form method="POST" action='/weather'>
       <input class="input" name="city" type="text" placeholder="Search..." >
         </form>
   </header> 
@@ -21,7 +22,7 @@
     <div class="buttonDiv">
 
       <div align="center"><a class="button" href="http://localhost:3000/">Back to Portfolio</a></div>
-      <div align="center"><a class="button" href="http://localhost:5000/">Current Location</a></div>
+      <div align="center" id="currentButton"><a class="button" href="http://localhost:5000/">Current Location</a></div>
     </div>
   </div>
 </main>

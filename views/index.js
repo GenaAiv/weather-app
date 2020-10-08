@@ -1,13 +1,12 @@
-document.addEventListener('load', () => {
+window.onload = () => {
 	getLocation();
-});
+};
 
 const getLocation = () => {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showPosition);
 	}
 };
-
 const showPosition = (position) => {
 	document.getElementById('getlat').value = position.coords.latitude;
 	document.getElementById('getlon').value = position.coords.longitude;
