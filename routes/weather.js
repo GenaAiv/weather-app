@@ -1,16 +1,18 @@
 const express = require('express');
-const key = '881cc1b6210cf691387d7f9d91cd80d8';
 const fetch = require('node-fetch');
+require('dotenv').config();
+const key = process.env.API_KEY;
+
 let router = express.Router();
 
 let options = {};
 
-const getLocationByCity = async (city) => {
+const getLocationByCity = async city => {
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
 	try {
 		await fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
+			.then(res => res.json())
+			.then(data => {
 				return (options = {
 					name: data.name,
 					temp: Math.round(data.main.temp),
@@ -32,8 +34,8 @@ const getLocationByLat = async (lat, lon) => {
 	const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${key}`;
 	try {
 		await fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
+			.then(res => res.json())
+			.then(data => {
 				return (options = {
 					name: data.name,
 					temp: Math.round(data.main.temp),
