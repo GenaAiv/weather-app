@@ -1,28 +1,28 @@
 <main>
   <header>
 
-            <form action="/weather" name="frm1">
-            <input type="hidden" name="longitude" id="getlon" />
-            <input type="hidden" name="latitude" id="getlat" />
-        </form>
-        <form method="POST" action='/weather'>
-      <input class="input" name="city" type="text" placeholder="Search..." >
-        </form>
-  </header> 
+    <form action="/weather" name="frm1">
+      <input type="hidden" name="longitude" id="getlon" />
+      <input type="hidden" name="latitude" id="getlat" />
+    </form>
+    <form method="POST" action='/weather'>
+      <input class="input" name="city" type="text" placeholder="Search...">
+    </form>
+  </header>
 
   <section class='location'>
     <div class='city name'>{{name}}</div>
     <p class="date"> {{date}}</p>
   </section>
   <div class='current'>
-    <div class="temp">{{temp}}° <img src='http://openweathermap.org/img/wn/{{icon}}@2x.png' alt=""></div> 
+    <div class="temp">{{temp}}° <img src='http://openweathermap.org/img/wn/{{icon}}@2x.png' alt=""></div>
     <div class="weather"> {{description}} </div>
     <div class='hi-low'> {{tempMin}}° / {{tempMax}}° </div>
-    
+
     <div class="buttonDiv">
 
       <div align="center"><a class="button" href="http://localhost:3000/">Back to Portfolio</a></div>
-      <div align="center" id="currentButton"><a class="button" href="https://weather-app-three.herokuapp.com/">Current Location</a></div>
+      <div align="center" class="button" id="currentButton">Get Current Location</div>
     </div>
   </div>
 </main>

@@ -1,5 +1,8 @@
 window.onload = () => {
-	getLocation();
+	const getCoord = document.getElementById('currentButton')
+	getCoord.addEventListener('click', () => {
+		getLocation();
+	})
 };
 
 const getLocation = () => {
@@ -14,6 +17,5 @@ const showPosition = (position) => {
 	lon = document.getElementById('getlon').value;
 
 	document.frm1.submit();
-	if (window.location.href != 'https://weather-app-three.herokuapp.com/')
-		window.stop();
+
 };
